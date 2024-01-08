@@ -1,4 +1,4 @@
-const getDoctors = async () => {
+export const getDoctors = async () => {
 	try {
 		const response = await fetch(`${process.env.REACT_APP_API_URL}/doctors`);
 		if (!response.ok) {
@@ -12,7 +12,7 @@ const getDoctors = async () => {
 	}
 };
 
-const getDoctor = async (id) => {
+export const getDoctor = async (id) => {
 	try {
 		const response = await fetch(
 			`${process.env.REACT_APP_API_URL}/doctors/${id}`
@@ -28,7 +28,7 @@ const getDoctor = async (id) => {
 	}
 };
 
-const getAvailableDoctorsForToday = async (patientId) => {
+export const getAvailableDoctorsForToday = async (patientId) => {
 	try {
 		const response = await fetch(
 			`${process.env.REACT_APP_API_URL}/doctors/available-today-for/${patientId}`
@@ -43,7 +43,7 @@ const getAvailableDoctorsForToday = async (patientId) => {
 	}
 };
 
-const getAppointmentsForAPatient = async (patientId) => {
+export const getAppointmentsForAPatient = async (patientId) => {
 	try {
 		const response = await fetch(
 			`${process.env.REACT_APP_API_URL}/appointments/patient/${patientId}`
@@ -58,7 +58,7 @@ const getAppointmentsForAPatient = async (patientId) => {
 	}
 };
 
-const getAppointmentsForAPatientForToday = async (patientId) => {
+export const getAppointmentsForAPatientForToday = async (patientId) => {
 	try {
 		const response = await fetch(
 			`${process.env.REACT_APP_API_URL}/appointments/today/${patientId}`
@@ -73,7 +73,7 @@ const getAppointmentsForAPatientForToday = async (patientId) => {
 	}
 };
 
-const getHealthTips = async () => {
+export const getHealthTips = async () => {
 	try {
 		const response = await fetch(
 			`${process.env.REACT_APP_API_URL}/health-tips`
@@ -88,7 +88,7 @@ const getHealthTips = async () => {
 	}
 };
 
-const createAppointment = async (appointmentData) => {
+export const createAppointment = async (appointmentData) => {
 	try {
 		const response = await fetch(
 			`${process.env.REACT_APP_API_URL}/appointments`,
@@ -115,7 +115,7 @@ const createAppointment = async (appointmentData) => {
 	}
 };
 
-const getTheDetailedAppointmentInfo = async (appointmentId) => {
+export const getTheDetailedAppointmentInfo = async (appointmentId) => {
 	try {
 		const response = await fetch(
 			`${process.env.REACT_APP_API_URL}/appointments/${appointmentId}`
@@ -135,7 +135,7 @@ const getTheDetailedAppointmentInfo = async (appointmentId) => {
 	}
 };
 
-const sendMail = async (
+export const sendMail = async (
 	nameOfReciever,
 	mailOfReciever,
 	mailSubject,
@@ -165,8 +165,7 @@ const sendMail = async (
 				body: JSON.stringify(mailInfoData),
 			});
 			if (!response.ok) {
-				let errorMessage =
-					"There was an issue sending the email...";
+				let errorMessage = "There was an issue sending the email...";
 				const responseBody = await response.json();
 				if (responseBody && responseBody.error) {
 					errorMessage = responseBody.error;
@@ -184,7 +183,7 @@ const sendMail = async (
 	}
 };
 
-module.exports = {
+const apiService = {
 	getDoctors,
 	getDoctor,
 	getAppointmentsForAPatient,
@@ -195,3 +194,5 @@ module.exports = {
 	getTheDetailedAppointmentInfo,
 	sendMail,
 };
+
+export default apiService;
