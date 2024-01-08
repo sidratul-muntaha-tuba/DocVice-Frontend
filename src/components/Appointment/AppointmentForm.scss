@@ -1,0 +1,25 @@
+// src/components/Appointment/AppointmentForm.scss
+
+.appointment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  input,
+  button {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+  }
+
+  button {
+    background-color: #5cb85c;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #4cae4c;
+    }
+  }
+}

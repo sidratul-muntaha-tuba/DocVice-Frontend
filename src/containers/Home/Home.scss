@@ -1,0 +1,85 @@
+// src/components/Home/Home.scss
+
+.home-container {
+  .hero {
+    background-color: #5b9bd5;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+
+    .hero-content {
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .carousal {
+    height: auto;
+  }
+
+  .services {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+
+    .service {
+      background-color: #f4f4f4;
+      border: 1px solid #ddd;
+      padding: 1rem;
+      border-radius: 8px;
+      width: 30%;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      h2 {
+        color: #333;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        color: #666;
+      }
+    }
+  }
+}
+
+// Responsive styling
+@media only screen and (max-width: 768px) {
+  .home-container {
+    .services {
+      flex-direction: column;
+      align-items: center;
+
+      .service {
+        width: 80%;
+        margin-bottom: 1rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .home-container {
+    .hero {
+      .hero-content {
+        h1 {
+          font-size: 2rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

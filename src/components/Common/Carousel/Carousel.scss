@@ -1,0 +1,96 @@
+// Carousel.scss
+.carousel-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  &:hover button {
+    opacity: 1;
+  }
+
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+
+    .carousel-item {
+      min-width: 100%;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: transform 0.3s ease-in-out;
+      border-radius: 15px;
+
+      .tips {
+        margin: 4rem auto;
+        width: 30rem;
+        padding: 2rem;
+        background-color: beige;
+        border-radius: 12px;
+        h2 {
+          margin-bottom: 1rem;
+        }
+      }
+
+      .doctors {
+        height: 400px;
+        margin-left: 8rem;
+        margin-right: 8rem;
+        text-align: center;
+
+        div {
+          img {
+            height: 100px;
+            width: 100px
+          }
+        }
+      }
+
+      img {
+          width: 100%;
+          height: auto;
+          border-radius: 15px; // This will round the corners of the image itself
+        }
+
+    }
+  }
+
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s;
+
+    &:hover {
+      color: white;
+      background-color: black;
+    }
+  }
+
+  .carousel-prev {
+    left: 30px;
+  }
+
+  .carousel-next {
+    right: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    .carousel {
+      .carousel-item {
+        height: 400px;
+      }
+    }
+  }
+}

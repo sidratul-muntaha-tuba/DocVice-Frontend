@@ -1,0 +1,47 @@
+// AdminApproveUsersPage.scss
+
+.admin-approve-users-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .user-list {
+    list-style: none;
+    padding: 0;
+
+    .user-item {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+
+      .user-details {
+        p {
+          margin: 5px 0;
+        }
+      }
+
+      .user-actions {
+        button {
+          padding: 5px 10px;
+          margin-top: 5px;
+          background-color: #4CAF50;
+          color: white;
+          border: none;
+          border-radius: 3px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: #45a049;
+          }
+        }
+      }
+    }
+  }
+}

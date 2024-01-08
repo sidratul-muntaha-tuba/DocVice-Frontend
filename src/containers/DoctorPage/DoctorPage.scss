@@ -1,0 +1,12 @@
+// src/containers/DoctorPage/DoctorPage.scss
+
+.doctor-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+}
+
+// Import the rest of the specific SCSS components
+@import '../../styles/main.scss';

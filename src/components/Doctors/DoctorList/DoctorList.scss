@@ -1,0 +1,30 @@
+.doctor-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+  align-items: start;
+  margin: 20px auto;
+  max-width: 1200px;
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+    button {
+      margin: 0 5px;
+      padding: 8px 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+}

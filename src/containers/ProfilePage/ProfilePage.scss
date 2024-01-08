@@ -1,0 +1,44 @@
+.profile-page {
+  max-width: 800px;
+  margin: 0 auto;
+
+  .profile-page-main-div {
+    text-align: center;
+    img {
+      height: 6rem;
+      width: auto;
+      margin: 2rem auto;
+    }
+
+    .details-table {
+      .table-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        transition: background-color 0.3s ease;
+        width: 100%;
+
+        &:nth-child(odd) {
+          background-color: #f5f5f5;
+        }
+
+        &:hover {
+          background-color: #e3e3e3;
+          cursor: pointer;
+        }
+
+        div {
+          padding: 5px;
+        }
+
+        .header {
+          width: 14rem;
+          text-align: left;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  /* Other styles as before */
+}

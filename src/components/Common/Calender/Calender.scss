@@ -1,0 +1,118 @@
+.calender {
+  font-family: Arial, sans-serif;
+  margin-top: 2rem;
+  width: 24rem;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    button {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      background-color: #f0f0f0;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #e0e0e0;
+      }
+    }
+
+    .month-year {
+      display: flex;
+      align-items: center;
+
+      select {
+        margin: 0 0.5rem;
+        padding: 0.3rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        appearance: none;
+      }
+    }
+  }
+
+  .body {
+    .row {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 0.5rem;
+    }
+
+    .day {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &.current-month {
+        color: #333;
+      }
+
+      &.other-month {
+        color: #ccc;
+      }
+
+      &.selected-date {
+        background-color: #ffcccc;
+        /* Red for selected dates */
+      }
+
+      &.other-date {
+        background-color: #ccffcc;
+        /* Green for other dates */
+      }
+
+      span {
+        font-size: 0.9rem;
+      }
+    }
+
+    .off-day {
+      background-color: #ffcccc;
+      border-radius: 50%;
+    }
+
+    .green-day {
+      background-color: #ccffcc;
+      border-radius: 50%;
+    }
+
+    .date {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &.current-month {
+        color: #333;
+      }
+
+      &.other-month {
+        color: #ccc;
+      }
+
+      &.selected-date {
+        background-color: #ffcccc;
+        /* Red for selected dates */
+      }
+
+      &.other-date {
+        background-color: #ccffcc;
+        /* Green for other dates */
+      }
+    }
+  }
+}

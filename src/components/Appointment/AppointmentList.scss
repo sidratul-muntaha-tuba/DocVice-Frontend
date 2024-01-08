@@ -1,0 +1,23 @@
+// src/components/Appointment/AppointmentList.scss
+
+.appointment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; // Spacing between appointment items
+  margin: 20px 0; // Margin around the whole list
+
+  // Responsive design adjustments
+  @media (max-width: 768px) {
+    gap: 15px;
+  }
+
+  @media (max-width: 480px) {
+    gap: 10px;
+  }
+
+  .no-appointments {
+    text-align: center;
+    color: #666;
+    padding: 20px;
+  }
+}
